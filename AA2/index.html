@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <title>My Vulnerable Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script>
+        function search(){
+            var searchInput = document.getElementById('searchInput').value;
+            // Change innerHTML to innerText 
+            document.getElementById('searchText').innerText = searchInput
+            // document.getElementById('searchText').innerHTML = searchInput
+        }
+    </script>
+    </head>
+    <body>
+        <center>
+            <h1>My Vulnerable Website</h1>
+            <br>
+            <input type="text" id="searchInput"> <input type="button" value="Search" onclick="search()">
+            <br>
+            <h3>Your Search:</h3><br>
+            <p id="searchText"></p>
+        </center>
+        
+    </body>
+</html>
